@@ -13,7 +13,7 @@ namespace WordCounter.Models
     public string Value {set;get;}
     public Sentence(string value)
     {
-      Value = "fail test";
+      Value = value;
     }
   }
 }
