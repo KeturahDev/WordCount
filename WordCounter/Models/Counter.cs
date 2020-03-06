@@ -2,12 +2,12 @@ namespace WordCounter.Models
 {
   public class Counter
   {
-    public string CheckFor {get;set;}
+    public string KeyWord {get;set;}
     public string Sentence {get;set;}
     public int Count {get;set;}
     public Counter(Word word, Sentence sentence)
     {
-      CheckFor = word.Key;
+      KeyWord = word.Key;
       Sentence = sentence.Value;
       Count = 0;
     }
@@ -19,7 +19,13 @@ namespace WordCounter.Models
     }
     public void Counting(string[] listOfWords)
     {
-      Count = Count += 0;
+      foreach (string word in listOfWords)
+      {
+        if(word == KeyWord)
+        {
+          Count = Count += 1;
+        }
+      }
     }
   }
 }
