@@ -27,7 +27,7 @@ This project is being created with the intention of practing spec creation, redg
 2. program needs to recieve the sentence to check from. input is sentence.
 3. program needs to only check for whole word true comparisons, not just matching combinations of letters in a bigger word. input is the sentence.. into a method which returns a list.
 4. program needs to be able to compare that sentence to word.. input is the list (return from a method) into a RepeatCount method. output is the number of repetitions 
-5. program needs to be able to return the counted number to the user.. input is number of repitions(from RepeatCount method), output is the number in a displayable/ readable format
+5. DONE WITH UI . not testing.. just spec
 
 
 ## Setup/Installation Requirements
