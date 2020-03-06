@@ -15,6 +15,20 @@ namespace WordCounter.Test
       string result = newWord.Key;
 
       Assert.AreEqual(key, result);
+    }    
+  }
+  [TestClass]
+  public class SentenceTests
+  {
+    [TestMethod]
+    public void SentenceCollected_InstanceOfSentenceAttainsSentance_String()
+    {
+      string userSentence = "I like turtles";
+      Sentence newSentence = new Sentence(userSentence);
+
+      string result = newSentence.Value;
+
+      Assert.AreEqual(userSentence, result); 
     }
   }
 }

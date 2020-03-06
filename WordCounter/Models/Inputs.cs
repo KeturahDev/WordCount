@@ -7,6 +7,13 @@ namespace WordCounter.Models
     {
       Key = keyword;
     }
-
+  }
+  public class Sentence
+  {
+    public string Value {set;get;}
+    public Sentence(string value)
+    {
+      Value = "fail test";
+    }
   }
 }
