@@ -5,7 +5,7 @@ namespace WordCounter.Models
     public string Key { get;set; }
     public Word(string keyword)
     {
-      Key = "fail test";
+      Key = keyword;
     }
 
   }
