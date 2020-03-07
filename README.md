@@ -20,6 +20,7 @@ This project is being created with the intention of practing spec creation, redg
 | 3. program seperates the sentence into a list of idividual words by " " | UserDentence: "this is my cowardly sentence" | List of words: *this, is, my, cowardly, sentence*  |
 | 4. "Count" method compares each word to KEY word and goes up by one with every instance of it in the sentence| List of words: *this, is, my, cowardly, sentence* | "Cow" count: *this **(no)**, is**(no)**, my**(no)**, cowardly**(no)**, sentence**(no)*** .. Count = 0 |
 | 5. number of repititions is returned to user | user inputs word "hi", sentence "hi there" | "hi" is used: *1 time* |
+| 6. sentence cuts out expressions (. , / ! ?) | word: "wow" sentence: "wow! wow, wow? wow." | word count: 4 |
 
 
 #### Description Sentences for specs by number:
