@@ -4,29 +4,26 @@ using WordCounter.Models;
 namespace WordCounter.Test 
 {
   [TestClass]
-  public class WordTests
+  public class InputTests
   {
     [TestMethod]
     public void WordKeyInstantiated_InstanceOfWordCreatesKey_String()
     {
       string key = "lemon";
-      Word newWord = new Word(key);
+      Input newInput = new Input(key);
 
-      string result = newWord.Key;
+      string result = newInput.Key;
 
       Assert.AreEqual(key, result);
     }    
-  }
-  [TestClass]
-  public class SentenceTests
-  {
     [TestMethod]
     public void SentenceCollected_InstanceOfSentenceAttainsSentance_String()
     {
+      string userWord = "turtles";
       string userSentence = "I like turtles";
-      Sentence newSentence = new Sentence(userSentence);
+      Input newInput = new Input(userWord, userSentence);
 
-      string result = newSentence.Value;
+      string result = newInput.Value;
 
       Assert.AreEqual(userSentence, result); 
     }

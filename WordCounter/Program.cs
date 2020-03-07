@@ -40,14 +40,13 @@ namespace WordCounter
       string usersWord = Console.ReadLine();
       Console.Write("Please enter the sentence to check:   ");
       string usersSentence = Console.ReadLine();
-      Word userWord = new Word(usersWord);
-      Sentence lyrics = new Sentence(usersSentence);
-      Counter newCounter = new Counter(userWord, lyrics);
+      Input userInputs = new Input(usersWord ,usersSentence);
+      Counter newCounter = new Counter(userInputs);
 
       string[] list = newCounter.GenerateArray();
       newCounter.Counting(list);
 
-      Console.WriteLine($"Your word {userWord.Key} is in that sentence {newCounter.Count} times");
+      Console.WriteLine($"Your word {userInputs.Key} is in that sentence {newCounter.Count} times");
       Start();
     }
   }

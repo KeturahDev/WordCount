@@ -5,10 +5,10 @@ namespace WordCounter.Models
     public string KeyWord {get;set;}
     public string Sentence {get;set;}
     public int Count {get;set;}
-    public Counter(Word word, Sentence sentence)
+    public Counter(Input input)
     {
-      KeyWord = word.Key;
-      Sentence = sentence.Value;
+      KeyWord = input.Key;
+      Sentence = input.Value;
       Count = 0;
     }
 

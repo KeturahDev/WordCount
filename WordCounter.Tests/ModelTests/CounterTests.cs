@@ -9,11 +9,10 @@ namespace WordCounter.Tests
     [TestMethod]
     public void GenerateArray_TurnSentenceIntoList_ArrayOfWords()
     {
-      string usersSentence = "If I were a rich man";
+      string lyrics = "If I were a rich man";
       string usersKeyWord = "rich";
-      Word userWord = new Word(usersKeyWord);
-      Sentence lyrics = new Sentence(usersSentence);
-      Counter newCounter = new Counter(userWord, lyrics);
+      Input userInputs = new Input( usersKeyWord, lyrics);
+      Counter newCounter = new Counter(userInputs);
 
       string[] list = newCounter.GenerateArray();
 
@@ -24,9 +23,8 @@ namespace WordCounter.Tests
     {
       string usersSentence = "If I were a rich man la la la la la la la la la la la";
       string usersKeyWord = "la";
-      Word userWord = new Word(usersKeyWord);
-      Sentence lyrics = new Sentence(usersSentence);
-      Counter newCounter = new Counter(userWord, lyrics);
+      Input newInput = new Input(usersKeyWord, usersSentence);
+      Counter newCounter = new Counter(newInput);
       string[] list = newCounter.GenerateArray();
       newCounter.Counting(list);
 

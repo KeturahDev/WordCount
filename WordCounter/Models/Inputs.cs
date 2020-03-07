@@ -4,10 +4,15 @@ namespace WordCounter.Models
   {
     public string Key { get;set; }
     public string Value {set;get;}
-    public Input(string keyword, string value)
+    public Input(string keyword)
     {
       Key = keyword;
-      Value = value;
+      // Value = value;
     }
+    public Input(string keyword, string value )
+      : this(keyword)
+      {
+        Value = value;
+      }
   }
 }
