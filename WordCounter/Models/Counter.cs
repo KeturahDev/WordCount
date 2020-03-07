@@ -20,24 +20,26 @@ namespace WordCounter.Models
       char[] chars = Sentence.ToCharArray();
       for(int i = 0; i < chars.Length; i++)
       {
+        //constructing the condition for every individual char
         bool condition = true;
         for(int j = 0; j < expressionsToIgnore.Count; j++)
         {
+          // if any of the characters are an expression, condition is false
           if (expressionsToIgnore.Contains(chars[i])) 
-          // if (!chars[i].Countains(expressionsToIgnore[j])) 
           {
             condition = false;
           }
         }
+        //the condition
         if (condition)
         {
-          // string currentChar = Char.ToString(chars[i]);
-          string currentChar = "bull";
-          // Console.Write($"{GetType(currentChar)}");
+          string currentChar = Char.ToString(chars[i]);
           potentialNewSentence.Add(currentChar);
         }
       }
-      string newSentence = new String(potentialNewSentence);
+      //turn new list into a singular string
+      string newSentence = String.Join("", potentialNewSentence.ToArray());
+      //Sentence is now equal to that string
       Sentence = newSentence;
     }
     public string[] GenerateArray()
