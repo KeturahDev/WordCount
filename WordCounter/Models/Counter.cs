@@ -11,7 +11,10 @@ namespace WordCounter.Models
       Sentence = input.Value;
       Count = 0;
     }
-
+    public void IgnoreExpressions()
+    {
+      //code
+    }
     public string[] GenerateArray()
     {
       string[] stringArray = Sentence.Split(" ");

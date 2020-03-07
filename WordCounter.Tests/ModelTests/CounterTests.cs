@@ -31,7 +31,21 @@ namespace WordCounter.Tests
       int numberOfOccurences = newCounter.Count;
 
       Assert.AreEqual(11, numberOfOccurences);
+    }
+    [TestMethod]
+    public void ExpressionsIgnored_ExpressionsAreCutBeforeListIsCreated_string()
+    {
+      string usersSentence = "If I were a rich man, la la la la la la, la la la la la la la, la la!";
+      string usersKeyWord = "la";
+      Input newInput = new Input(usersKeyWord, usersSentence);
+      Counter newCounter = new Counter(newInput);
+      newCounter.IgnoreExpressions();
+      string[] list = newCounter.GenerateArray();
+      newCounter.Counting(list);
 
+      int numberOfOccurences = newCounter.Count;
+
+      Assert.AreEqual(15, numberOfOccurences);
     }
   }
 }
