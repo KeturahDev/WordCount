@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 namespace WordCounter.Models
 {
   public class Counter
@@ -13,7 +14,20 @@ namespace WordCounter.Models
     }
     public void IgnoreExpressions()
     {
-      //code
+      List<char> expressionsToIgnore = new List<char> {'!','?','.',',','/','-',':',';'};
+      List<char> potentialNewSentence = new List<char> {};
+      char[] chars = Sentence.ToCharArray();
+      for(int i = 0; i < chars.Length; i++)
+      {
+        
+      for(int j = 0; j < expressionsToIgnore.Length; j++)
+      {
+        if (!! chars[i].Countains(expressionsToIgnore[j])) 
+        {
+          
+        }
+      }
+      }
     }
     public string[] GenerateArray()
     {

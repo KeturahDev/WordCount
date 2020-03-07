@@ -36,6 +36,7 @@ namespace WordCounter.Tests
     public void ExpressionsIgnored_ExpressionsAreCutBeforeListIsCreated_string()
     {
       string usersSentence = "If I were a rich man, la la la la la la, la la la la la la la, la la!";
+      // string usersSentence = "If I were a rich man la la la la la la la la la la la la la la la";
       string usersKeyWord = "la";
       Input newInput = new Input(usersKeyWord, usersSentence);
       Counter newCounter = new Counter(newInput);
