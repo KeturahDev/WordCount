@@ -7,7 +7,6 @@ namespace WordCounter.Models
     public Input(string keyword)
     {
       Key = keyword;
-      // Value = value;
     }
     public Input(string keyword, string value )
       : this(keyword)

@@ -25,6 +25,7 @@ namespace WordCounter
     public static void Start()
     {
       Console.ForegroundColor = ConsoleColor.Cyan;
+      Console.WriteLine("");
       Console.WriteLine("================================================================================================");
       Console.ForegroundColor = ConsoleColor.Blue;
       Console.WriteLine("Wound you like to go enter word or exit the application");
@@ -39,7 +40,9 @@ namespace WordCounter
       }
       else if (response == "e")
       {
+        Console.WriteLine("");
         Console.WriteLine("Goodbye!");
+        Console.WriteLine("");
       }
       else
       {
@@ -48,23 +51,29 @@ namespace WordCounter
     }
     public static void CountWord()
     {
+      //collect data
       Console.ForegroundColor = ConsoleColor.Blue;
+      Console.WriteLine("");
       Console.Write("Please enter the word to check for:   ");
       Console.ForegroundColor = ConsoleColor.Green;
       string usersWord = Console.ReadLine();
       Console.ForegroundColor = ConsoleColor.Blue;
       Console.Write("Please enter the sentence to check:   ");
       Console.ForegroundColor = ConsoleColor.Green;
+
+      //manipulate data
       string usersSentence = Console.ReadLine().ToLower();
       Input userInputs = new Input(usersWord ,usersSentence);
       Counter newCounter = new Counter(userInputs);
       newCounter.IgnoreExpressions();
-      // Console.WriteLine($">>>>   SENTENCE AFTER IEMETHOD:{newCounter.Sentence}");
       string[] list = newCounter.GenerateArray();
       newCounter.Counting(list);
 
+      //return data
       Console.ForegroundColor = ConsoleColor.Magenta;
-      Console.WriteLine($"Your word {userInputs.Key} is in that sentence {newCounter.Count} times");
+      Console.WriteLine($"Your word {userInputs.Key} is in that sentence {newCounter.Count} times.");
+
+      //loop
       Start();
     }
   }
