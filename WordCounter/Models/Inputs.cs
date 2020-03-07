@@ -1,18 +1,12 @@
 namespace WordCounter.Models
 {
-  public class Word
+  public class Input
   {
     public string Key { get;set; }
-    public Word(string keyword)
+    public string Value {set;get;}
+    public Input(string keyword, string value)
     {
       Key = keyword;
-    }
-  }
-  public class Sentence
-  {
-    public string Value {set;get;}
-    public Sentence(string value)
-    {
       Value = value;
     }
   }

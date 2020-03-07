@@ -13,7 +13,7 @@ namespace WordCounter
     public static void Welcome()
     {
       Console.WriteLine("WordCounter");
-      Console.WriteLine("Where you can enter a sentence, a wowrd you want to count, and we'll count it for you!");
+      Console.WriteLine("Where you can enter a sentence, a word you want to count, and we'll count it for you!");
     }
     public static void Start()
     {
