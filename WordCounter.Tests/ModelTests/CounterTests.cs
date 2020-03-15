@@ -7,16 +7,27 @@ namespace WordCounter.Tests
   public class CounterTests 
   {
     [TestMethod]
-    public void GenerateArray_TurnSentenceIntoList_ArrayOfWords()
+    public void InstantiateCounter_InstanceOfCounterIsCreated_Counter()
+    {
+      string keyWord = "orange";
+      string sentence = "orange you glad I made a constructor test?";
+      Input newInput = new Input(keyWord, sentence);
+
+      Counter newCounter = new Counter(newInput);
+
+      Assert.AreEqual(newInput.Key, newCounter.KeyWord);
+    }
+    [TestMethod]
+    public void GenerateArray_TurnSentenceIntoArray_StringArray()
     {
       string lyrics = "If I were a rich man";
       string usersKeyWord = "rich";
       Input userInputs = new Input( usersKeyWord, lyrics);
       Counter newCounter = new Counter(userInputs);
+      string[] comparison = {"If", "I", "were", "a", "rich", "man"};
+      string[] result = newCounter.GenerateArray();
 
-      string[] list = newCounter.GenerateArray();
-
-      Assert.AreEqual("If",list[0]);
+      CollectionAssert.AreEqual(comparison, result);
     }
     [TestMethod]
     public void CountingWord_CountsOccurancesOfKeyInSentence_int()
