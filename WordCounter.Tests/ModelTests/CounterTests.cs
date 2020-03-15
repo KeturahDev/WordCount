@@ -30,7 +30,7 @@ namespace WordCounter.Tests
       CollectionAssert.AreEqual(comparison, result);
     }
     [TestMethod]
-    public void CountingWord_CountsOccurancesOfKeyInSentence_int()
+    public void Counting_CountsOccurancesOfKeyInSentence_int()
     {
       string usersSentence = "If I were a rich man la la la la la la la la la la la";
       string usersKeyWord = "la";

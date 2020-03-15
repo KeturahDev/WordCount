@@ -7,7 +7,7 @@ namespace WordCounter.Test
   public class InputTests
   {
     [TestMethod]
-    public void WordKeyInstantiated_InstanceOfWordCreatesKey_String()
+    public void InputClassConstructor_InstanceOfInputHasKeyProperty_String()
     {
       string key = "lemon";
       Input newInput = new Input(key);
@@ -17,7 +17,7 @@ namespace WordCounter.Test
       Assert.AreEqual(key, result);
     }    
     [TestMethod]
-    public void SentenceCollected_InstanceOfSentenceAttainsSentance_String()
+    public void InputClassOverLoadedConstructor_InstanceOfInputHasValueProperty_String()
     {
       string userWord = "turtles";
       string userSentence = "I like turtles";

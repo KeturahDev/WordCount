@@ -15,12 +15,12 @@ This project is being created with the intention of practing spec creation, redg
 
 | Specification | Example Input | Example Output |
 | :------------- |:-------------| :-------------------|
-| 1. user inputs a word, program holds on to as the word to be checking for | *(string)* user "cow" | program checks for.. KEY: *cow*  |
-| 2. program takes in a sentence | *(string)* UserSentence: "this is my cowardly sentence" | program will be checking: *UserSentence*  |
-| 3. program seperates the sentence into a list of idividual words by " " | *(string)* UserDentence: "this is my cowardly sentence" | *List* of words: *this, is, my, cowardly, sentence*  |
+| 1. Program takes in a single word from the user | *(string)* user "cow" | program checks for.. KEY: *cow*  |
+| 2. Program takes in a sentence from the user. | *(string)* UserSentence: "this is my cowardly sentence" | program will be checking: *UserSentence*  |
+| 3. Program separates sentence into an array of the individual words of the sentence. | "this is my cowardly sentence" | { this, is, my, cowardly, sentence }  |
 | 4. "Counting" method compares each word to KEY word and goes up by one with every instance of it in the sentence| *List* of words: *this, is, my, cowardly, sentence* | "Cow" count: *this **(no)**, is**(no)**, my**(no)**, cowardly**(no)**, sentence**(no)*** .. Count = 0 |
 | 5. number of repititions is returned to user | user inputs word "hi", sentence "hi there" | "hi" is used: *1 time* |
-| 6. sentence cuts out expressions (. , / ! ?) | word: "wow" sentence: "wow! wow, wow? wow." | word count: 4 |
+| 6. Program removes the following punctuation from the sentence: . , / ! ? | key: "wow", sentence: "wow! wow, wow? wow." | processed collection of words: "wow wow wow wow wow" |
 
 
 #### Elaborating descriptions for specs by number:
